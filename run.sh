@@ -16,7 +16,7 @@ build_image() {
 }
 
 create_and_run() {
-	docker run --name docker-vm -it -v $(pwd)/shared:/shared docker-vm
+	docker run --privileged=true --name docker-vm -it -v $(pwd)/shared:/shared docker-vm
 }
 
 restart_and_run() {
