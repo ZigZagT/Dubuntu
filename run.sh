@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 IMAGE_NAME="docker-vm"
 CONTAINER_NAME="docker-vm"
