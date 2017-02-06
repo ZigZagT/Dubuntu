@@ -16,7 +16,8 @@ build_image() {
 }
 
 create_and_run() {
-	docker run --privileged=true --name docker-vm -it -v $(pwd)/shared:/shared docker-vm
+	echo trying to run $CONTAINER_NAME
+	docker run --privileged=true --name docker-vm -d -v $(pwd)/shared:/shared -p 127.0.0.1:22:22 docker-vm
 }
 
 restart_and_run() {
@@ -28,8 +29,8 @@ clear_images() {
 }
 
 if [[ $REBUILD ]]; then
-	build_image
 	remove_container_if_exists
+	build_image
 	create_and_run
 else
 	echo "not support yet"
