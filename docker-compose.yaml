@@ -1,0 +1,11 @@
+version: "3"
+services:
+  docker-vm:
+    build: .
+    image: docker-vm
+    container_name: docker-vm
+    ports:
+    - 127.0.0.1:22:22
+    volumes:
+    - ./shared:/shared
+    privileged: true

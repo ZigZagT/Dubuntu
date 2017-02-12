@@ -32,7 +32,6 @@ EXPOSE 22 80 8080 1080 8000
 COPY sources.list /etc/apt/sources.list
 COPY dircolors /root/.dircolors
 COPY authorized_keys /root/.ssh/authorized_keys
-COPY zshrc /root/.zshrc
 
 RUN apt-get update && \
 	apt-get install -y --no-install-recommends apt-utils && \
@@ -46,10 +45,11 @@ RUN apt-get update && \
     apt-get update && \
     apt-get -y install docker-engine && \
 	sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"; \
-	dircolors -b ~/.dircolors >> ~/.zshrc && \
 	chsh -s /bin/zsh
 
+COPY zshrc /root/.zshrc
 COPY robbyrussell.zsh-theme /root/.oh-my-zsh/themes/robbyrussell.zsh-theme
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+RUN	dircolors -b ~/.dircolors >> ~/.zshrc
 
 CMD ["/usr/bin/supervisord"]
