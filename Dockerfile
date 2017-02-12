@@ -50,6 +50,7 @@ RUN apt-get update && \
 COPY zshrc /root/.zshrc
 COPY robbyrussell.zsh-theme /root/.oh-my-zsh/themes/robbyrussell.zsh-theme
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+COPY entrypoint.sh /entrypoint.sh
 RUN	dircolors -b ~/.dircolors >> ~/.zshrc
 
-CMD ["/usr/bin/supervisord"]
+CMD ["/entrypoint.sh"]
