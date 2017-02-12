@@ -15,7 +15,7 @@ ARG INSTALL_PACKAGES="\
 	openssh-server \
 	iputils-ping \
 	libnet-ifconfig-wrapper-perl \
-	linux-image-extra-4.8.0-35-generic \
+	linux-image-extra-4.8.0-36-generic \
 	linux-image-extra-virtual \
 	apt-transport-https \
 	ca-certificates \
@@ -51,4 +51,4 @@ RUN apt-get update && \
 COPY robbyrussell.zsh-theme /root/.oh-my-zsh/themes/robbyrussell.zsh-theme
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
-ENTRYPOINT ["/usr/bin/supervisord"]
+CMD ["/usr/bin/supervisord"]
