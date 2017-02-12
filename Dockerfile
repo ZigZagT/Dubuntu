@@ -30,9 +30,6 @@ WORKDIR /root
 EXPOSE 22 80 8080 1080 8000
 
 COPY sources.list /etc/apt/sources.list
-COPY dircolors /root/.dircolors
-COPY authorized_keys /root/.ssh/authorized_keys
-
 RUN apt-get update && \
 	apt-get install -y --no-install-recommends apt-utils && \
 	apt-get install -y $INSTALL_PACKAGES && \
@@ -47,10 +44,13 @@ RUN apt-get update && \
 	sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"; \
 	chsh -s /bin/zsh
 
+COPY dircolors /root/.dircolors
+RUN	dircolors -b ~/.dircolors >> ~/.zshrc
+
 COPY zshrc /root/.zshrc
 COPY robbyrussell.zsh-theme /root/.oh-my-zsh/themes/robbyrussell.zsh-theme
+COPY authorized_keys /root/.ssh/authorized_keys
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 COPY entrypoint.sh /entrypoint.sh
-RUN	dircolors -b ~/.dircolors >> ~/.zshrc
 
 CMD ["/entrypoint.sh"]
