@@ -20,14 +20,18 @@ ARG INSTALL_PACKAGES="\
 	apt-transport-https \
 	ca-certificates \
 	software-properties-common \
+	supervisor \
+	supervisor-doc \
+	launchtool \
 "
 ARG TERM=xterm-256color
 VOLUME /shared
 WORKDIR /root
+EXPOSE 22 80 8080 1080 8000
 
-COPY ./sources.list /etc/apt/sources.list
-COPY ./dircolors /root/.dircolors
-COPY ./authorized_keys /root/.ssh/authorized_keys
+COPY sources.list /etc/apt/sources.list
+COPY dircolors /root/.dircolors
+COPY authorized_keys /root/.ssh/authorized_keys
 
 RUN apt-get update && \
 	apt-get install -y --no-install-recommends apt-utils && \
@@ -44,7 +48,7 @@ RUN apt-get update && \
 	dircolors -b ~/.dircolors >> ~/.zshrc && \
 	chsh -s /bin/zsh
 
-COPY ./robbyrussell.zsh-theme /root/.oh-my-zsh/themes/robbyrussell.zsh-theme
-COPY ./entrypoint.sh /root/.entrypoint.sh
+COPY robbyrussell.zsh-theme /root/.oh-my-zsh/themes/robbyrussell.zsh-theme
+COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
-ENTRYPOINT ["/root/.entrypoint.sh"]
+ENTRYPOINT ["/usr/bin/supervisord"]
