@@ -32,6 +32,7 @@ EXPOSE 22 80 8080 1080 8000
 COPY sources.list /etc/apt/sources.list
 COPY dircolors /root/.dircolors
 COPY authorized_keys /root/.ssh/authorized_keys
+COPY zshrc /root/.zshrc
 
 RUN apt-get update && \
 	apt-get install -y --no-install-recommends apt-utils && \
