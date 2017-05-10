@@ -1,8 +1,7 @@
 version: "3"
 services:
   dubuntu:
-    build: .
-    image: dubuntu
+    image: 4oranges/dubuntu
     container_name: dubuntu
     ports:
     - 127.0.0.1:22:22
