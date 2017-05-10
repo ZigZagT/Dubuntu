@@ -24,6 +24,10 @@ ARG INSTALL_PACKAGES="\
 	supervisor \
 	supervisor-doc \
 	launchtool \
+	python \
+	python-pip \
+	python3 \
+	python3-pip \
 "
 ARG TERM=xterm-256color
 VOLUME /shared
