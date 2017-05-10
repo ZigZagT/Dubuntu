@@ -27,7 +27,7 @@ or
 
 > `ssh root@127.0.0.1`
 
-If you desired to use ssh, replace the `authorized_keys` with your own keys before build the vm.
+If you desired to use ssh, you should replace the `authorized_keys` with your own keys before build, or manually set the key in container.
 
 ## What's inside
 
