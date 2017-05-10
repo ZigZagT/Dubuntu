@@ -1,4 +1,4 @@
-# Docker VM
+# Dubuntu
 
 This is an ubuntu virtual machine enviroment running in docker.
 
@@ -6,7 +6,7 @@ This is an ubuntu virtual machine enviroment running in docker.
 
 ### From Docker Hub
 
-Pull the image from [Docker Hub](https://hub.docker.com/r/4oranges/dobuntu/) directly.
+Pull the image from [Docker Hub](https://hub.docker.com/r/4oranges/dubuntu/) directly.
 
 ### Manual Setup
 
@@ -21,7 +21,7 @@ Execute `run.sh` to build the image, and create the container.
 
 Run 
 
-> `docker exec -it dobuntu zsh`
+> `docker exec -it dubuntu zsh`
 
 or
 

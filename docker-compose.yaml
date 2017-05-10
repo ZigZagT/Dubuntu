@@ -2,8 +2,8 @@ version: "3"
 services:
   Dobuntu:
     build: .
-    image: dobuntu
-    container_name: dobuntu
+    image: dubuntu
+    container_name: dubuntu
     ports:
     - 127.0.0.1:22:22
     volumes:
