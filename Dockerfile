@@ -5,6 +5,7 @@ ARG INSTALL_PACKAGES="\
 	lsb \
 	man \
 	git \
+	telnet \
 	vim \
 	curl \
 	wget \
