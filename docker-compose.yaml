@@ -1,9 +1,9 @@
 version: "3"
 services:
-  docker-vm:
+  Dobuntu:
     build: .
-    image: docker-vm
-    container_name: docker-vm
+    image: Dobuntu
+    container_name: Dobuntu
     ports:
     - 127.0.0.1:22:22
     volumes:

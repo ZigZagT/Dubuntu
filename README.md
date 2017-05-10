@@ -15,7 +15,7 @@ Execute `run.sh` to create the VM.
 
 Run 
 
-> `docker exec -it docker-vm zsh`
+> `docker exec -it Dobuntu zsh`
 
 or
 

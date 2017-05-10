@@ -106,6 +106,3 @@ bindkey -s "^[Ol" "+"
 bindkey -s "^[Om" "-"
 bindkey -s "^[Oj" "*"
 bindkey -s "^[Oo" "/"
-
-# export DJANGO_SETTINGS_MODULE=settings
-# export PYTHONPATH=/services/appannie/aa
