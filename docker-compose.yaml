@@ -2,7 +2,7 @@ version: "3"
 services:
   Dobuntu:
     build: .
-    image: Dobuntu
+    image: dobuntu
     container_name: Dobuntu
     ports:
     - 127.0.0.1:22:22
