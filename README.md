@@ -2,9 +2,15 @@
 
 This is an ubuntu virtual machine enviroment running in docker.
 
-## Run
+## Build
 
-Execute `run.sh` to create the VM.
+### From Docker Hub
+
+Pull the image from [Docker Hub](https://hub.docker.com/r/4oranges/dobuntu/) directly.
+
+### Manual Setup
+
+Execute `run.sh` to build the image, and create the container.
 
 `run.sh` script uses `docker-compose` and does these things:
 - Build / Rebuild the image if needed
@@ -15,7 +21,7 @@ Execute `run.sh` to create the VM.
 
 Run 
 
-> `docker exec -it Dobuntu zsh`
+> `docker exec -it dobuntu zsh`
 
 or
 
@@ -26,6 +32,7 @@ If you desired to use ssh, replace the `authorized_keys` with your own keys befo
 ## What's inside
 
 - Ubuntu 16.04 kernel 4.9.4
+- basic network utils like telnet, ping, etc.
 - lsb
 - ssh server
 - oh my zsh
@@ -38,4 +45,3 @@ check the `Dockerfile` to get more detail about the installed packages.
 - Setup python dev environment
 - Setup node.js dev environment
 - Basic web server environment
-- Use build tools to generate `Dockerfile` dynamically

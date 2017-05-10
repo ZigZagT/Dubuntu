@@ -3,7 +3,7 @@ services:
   Dobuntu:
     build: .
     image: dobuntu
-    container_name: Dobuntu
+    container_name: dobuntu
     ports:
     - 127.0.0.1:22:22
     volumes:
