@@ -1,3 +1,9 @@
+# load bashrc
+alias shopt="echo unsupported bash command: shopt "
+if [ -f ~/.bashrc ]; then
+    . ~/.bashrc
+fi
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -51,7 +57,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(sudo docker)
+plugins=(git docker)
 
 source $ZSH/oh-my-zsh.sh
 
