@@ -47,8 +47,7 @@ COPY dubuntu.zsh-theme /root/.oh-my-zsh/custom/dubuntu.zsh-theme
 COPY dircolors /root/.dircolors
 RUN dircolors -b /root/.dircolors > /root/.dircolors_source
 
-COPY ssh/authorized_keys /root/.ssh/authorized_keys
-COPY ssh/ssh_host_*_key /etc/ssh/
+COPY authorized_keys /root/.ssh/authorized_keys
 
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 COPY entrypoint.sh /entrypoint.sh

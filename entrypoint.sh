@@ -11,6 +11,9 @@ if [ -f /shared/authorized_keys ]; then
 	chmod 644 /root/.ssh/authorized_keys
 fi
 if [ -f /shared/dircolors ]; then dircolors -b /shared/dircolors > /root/.dircolors_source; fi
-
+for f in "$(ls /shared/ssh_host_*_key)"; do
+	local key_file_name=$(basename "$f")
+	ln -sf "/shared/$key_file_name" "/etc/ssh/$key_file_name"
+done
 
 /usr/bin/supervisord
