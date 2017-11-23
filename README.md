@@ -3,7 +3,7 @@
 This is a ubuntu virtual machine enviroment running in docker.
 
 ## Installation
-### Pulling from DockerHub
+### Pull from DockerHub
 ```bash
 docker pull 4oranges/dubuntu
 ```
@@ -26,8 +26,15 @@ cat ~/.ssh/id_rsa.pub >> shared/authorized_keys
 ```bash
 ssh root@localhost
 ```
+
 ### Change VM Settings
-Having setting files in the [shared](shared) folder will help this trick.
+Put files listed below inside `/shared` to override corresponding settings. 
+- `sources.list`: override `/etc/apt/sources.list` in VM.
+- `resolv.conf`: override `/etc/resolv.conf` in VM.
+- `authorized_keys`: override `/root/.ssh/authorized_keys` in VM.
+- `dircolors`: override color mapping of the inside console.
+- `profile`: addition `zsh` startup source script.
+- `ssh_host_rsa_key`: override /etc/ssh/ssh_host_rsa_key, the host rsa key. Will be generated automatically if not exists.
 
 
 ## What's Inside
