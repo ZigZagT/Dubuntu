@@ -45,8 +45,8 @@ RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh
 COPY zshrc /root/.zshrc
 COPY dubuntu.zsh-theme /root/.oh-my-zsh/custom/dubuntu.zsh-theme
 
-COPY dircolors /root/.dircolors
-RUN dircolors -b /root/.dircolors > /root/.dircolors_source
+RUN wget "https://raw.githubusercontent.com/seebi/dircolors-solarized/master/dircolors.256dark" \
+    && dircolors -b dircolors.256dark > /root/.dircolors_source
 
 COPY authorized_keys /root/.ssh/authorized_keys
 

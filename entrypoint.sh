@@ -14,6 +14,7 @@ if [ -f /shared/dircolors ]; then dircolors -b /shared/dircolors > /root/.dircol
 
 if [ ! -f /shared/ssh_host_rsa_key ]; then
 	ssh-keygen -f /shared/ssh_host_rsa_key -N '' -t rsa
+	rm -f /shared/ssh_host_rsa_key.pub
 fi
 ln -sf /shared/ssh_host_rsa_key /etc/ssh/ssh_host_rsa_key
 
