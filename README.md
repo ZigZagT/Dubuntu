@@ -1,47 +1,47 @@
 # Dubuntu
 
-This is an ubuntu virtual machine enviroment running in docker.
+This is a ubuntu virtual machine enviroment running in docker.
 
-## Build
+## Installation
+### Pulling from DockerHub
+```bash
+docker pull 4oranges/dubuntu
+```
 
-### From Docker Hub
+### Or Build it Locally
+```bash
+git clone https://github.com/4Oranges/Dubuntu.git && cd Dubuntu
+./build.sh
+```
 
-Pull the image from [Docker Hub](https://hub.docker.com/r/4oranges/dubuntu/) directly.
+## Usage
+### Boot VM
+```bash
+# make sure you are in side the Dubuntu directory
+cat ~/.ssh/id_rsa.pub >> shared/authorized_keys
+./start.sh
+```
 
-### Manual Setup
+### Connect to VM
+```bash
+ssh root@127.0.0.1
+```
+### Change VM Settings
+Having setting files in the [shared](shared) folder will help this trick.
 
-Execute `run.sh` to build the image, and create the container.
 
-`run.sh` script uses `docker-compose` and does these things:
-- Build / Rebuild the image if needed
-- Create / Recreate the container if needed
-- Startup the container
+## What's Inside
 
-## Connect to VM
-
-Run 
-
-> `docker exec -it dubuntu zsh`
-
-or
-
-> `ssh root@127.0.0.1`
-
-If you desired to use ssh, you should replace the `authorized_keys` with your own keys before build, or manually set the key in container.
-
-## What's inside
-
-- Ubuntu 16.04 kernel 4.9.4
+- Ubuntu xenial (16.04)
 - basic network utils like telnet, ping, etc.
 - lsb
 - ssh server
 - oh my zsh
 - docker engine
+- python2 and python3
 
 check the `Dockerfile` to get more detail about the installed packages.
 
 ## TODO
-
-- Setup python dev environment
 - Setup node.js dev environment
 - Basic web server environment
