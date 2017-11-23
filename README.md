@@ -24,7 +24,7 @@ cat ~/.ssh/id_rsa.pub >> shared/authorized_keys
 
 ### Connect to VM
 ```bash
-ssh root@127.0.0.1
+ssh root@localhost
 ```
 ### Change VM Settings
 Having setting files in the [shared](shared) folder will help this trick.

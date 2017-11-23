@@ -37,7 +37,8 @@ RUN apt-get update \
         stable" \
     && apt-get update \
     && apt-get install docker-ce -y \
-    && apt-get autoremove -y && apt-get clean && rm -rf /var/lib/apt/lists/*
+    && apt-get autoremove -y && apt-get clean && rm -rf /var/lib/apt/lists/* \
+    && rm -f /etc/ssh/ssh_host_*_key
 
 RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"; \
     chsh -s /bin/zsh
