@@ -1,6 +1,6 @@
 # Dubuntu
 
-This is a ubuntu virtual machine enviroment running in docker.
+A handy ubuntu enviroment in docker.
 
 ## Installation
 ### Pull from DockerHub
@@ -15,7 +15,7 @@ git clone https://github.com/4Oranges/Dubuntu.git && cd Dubuntu
 ```
 
 ## Usage
-### Boot VM
+### Boot/Restart VM
 ```bash
 # make sure you are in side the Dubuntu directory
 cat ~/.ssh/id_rsa.pub >> shared/authorized_keys
@@ -38,7 +38,6 @@ Put files listed below inside `/shared` to override corresponding settings.
 
 
 ## What's Inside
-
 - Ubuntu xenial (16.04)
 - basic network utils like telnet, ping, etc.
 - lsb
@@ -46,8 +45,10 @@ Put files listed below inside `/shared` to override corresponding settings.
 - oh my zsh
 - docker engine
 - python2 and python3
+- ...
 
-check the `Dockerfile` to get more detail about the installed packages.
+## Know Issues
+- Because Docker for Mac is running in a real virtual machine([hyperkit](https://github.com/moby/hyperkit)), after a long sleep, the hyperkit may have its clock drift, which may cause the ssh connection fails. Re-run `./start.sh` to workaround.
 
 ## TODO
 - Setup node.js dev environment

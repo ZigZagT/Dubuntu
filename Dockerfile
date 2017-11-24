@@ -54,6 +54,6 @@ COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 COPY entrypoint.sh /entrypoint.sh
 
 VOLUME /shared
-WORKDIR /root
+WORKDIR /shared
 EXPOSE 22 80
 CMD ["/entrypoint.sh"]
