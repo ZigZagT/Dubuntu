@@ -1,9 +1,4 @@
 #!/usr/bin/env zsh
-# load bashrc
-alias shopt="echo unsupported bash command: shopt "
-if [ -f ~/.bashrc ]; then
-    . ~/.bashrc
-fi
 locale-gen $LANG > /dev/null
 
 export ZSH=/root/.oh-my-zsh
