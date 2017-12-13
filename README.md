@@ -1,12 +1,6 @@
 # Dubuntu
 
-[![Build Status](https://travis-ci.org/4Oranges/Dubuntu.svg)](https://travis-ci.org/4Oranges/Dubuntu)
-
-[![Docker Stars](https://img.shields.io/docker/stars/4oranges/dubuntu.svg)](https://hub.docker.com/r/4oranges/dubuntu/)
-
-[![Docker Pulls](https://img.shields.io/docker/pulls/4oranges/dubuntu.svg)](https://hub.docker.com/r/4oranges/dubuntu/)
-
-[![ImageLayers](https://images.microbadger.com/badges/image/4oranges/dubuntu.svg)](https://microbadger.com/#/images/4oranges/dubuntu)
+[![Build Status](https://travis-ci.org/4Oranges/Dubuntu.svg)](https://travis-ci.org/4Oranges/Dubuntu) [![Docker Stars](https://img.shields.io/docker/stars/4oranges/dubuntu.svg)](https://hub.docker.com/r/4oranges/dubuntu/) [![Docker Pulls](https://img.shields.io/docker/pulls/4oranges/dubuntu.svg)](https://hub.docker.com/r/4oranges/dubuntu/) 
 
 A handy ubuntu enviroment in docker.
 
@@ -61,3 +55,4 @@ Put files listed below inside `/shared` to override corresponding settings.
 ## TODO
 - Setup node.js dev environment
 - Basic web server environment
+
