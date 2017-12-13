@@ -2,11 +2,11 @@
 
 [![Build Status](https://travis-ci.org/4Oranges/Dubuntu.svg)](https://travis-ci.org/4Oranges/Dubuntu)
 
-[![Docker Stars](https://img.shields.io/docker/stars/4Oranges/Dubuntu.svg)](https://hub.docker.com/r/4Oranges/Dubuntu/)
+[![Docker Stars](https://img.shields.io/docker/stars/4oranges/dubuntu.svg)](https://hub.docker.com/r/4oranges/dubuntu/)
 
-[![Docker Pulls](https://img.shields.io/docker/pulls/4Oranges/Dubuntu.svg)](https://hub.docker.com/r/4Oranges/Dubuntu/)
+[![Docker Pulls](https://img.shields.io/docker/pulls/4oranges/dubuntu.svg)](https://hub.docker.com/r/4oranges/dubuntu/)
 
-[![ImageLayers](https://images.microbadger.com/badges/image/4Oranges/Dubuntu.svg)](https://microbadger.com/#/images/4Oranges/Dubuntu)
+[![ImageLayers](https://images.microbadger.com/badges/image/4oranges/dubuntu.svg)](https://microbadger.com/#/images/4oranges/dubuntu)
 
 A handy ubuntu enviroment in docker.
 
