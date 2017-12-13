@@ -1,7 +1,9 @@
 FROM ubuntu:xenial
 
 ARG DEBIAN_FRONTEND=noninteractive
-ENV TERM=xterm-256color LANG=en_US.UTF-8 LC_COLLATE=en_US.UTF-8 LC_CTYPE=en_US.UTF-8 LC_MESSAGES=en_US.UTF-8 LC_MONETARY=en_US.UTF-8 LC_NUMERIC=en_US.UTF-8 LC_TIME=en_US.UTF-8 LC_ALL=en_US.UTF-8
+ENV TERM xterm-256color
+ENV LC_CTYPE en_US.UTF-8
+
 RUN apt-get update \
     && apt-get install -y --no-install-recommends apt-utils \
     && apt-get install -y \
