@@ -1,5 +1,13 @@
 # Dubuntu
 
+[![Build Status](https://travis-ci.org/4Oranges/Dubuntu.svg)](https://travis-ci.org/4Oranges/Dubuntu)
+
+[![Docker Stars](https://img.shields.io/docker/stars/4Oranges/Dubuntu.svg)](https://hub.docker.com/r/4Oranges/Dubuntu/)
+
+[![Docker Pulls](https://img.shields.io/docker/pulls/4Oranges/Dubuntu.svg)](https://hub.docker.com/r/4Oranges/Dubuntu/)
+
+[![ImageLayers](https://images.microbadger.com/badges/image/4Oranges/Dubuntu.svg)](https://microbadger.com/#/images/4Oranges/Dubuntu)
+
 A handy ubuntu enviroment in docker.
 
 ## Installation

@@ -1,0 +1,10 @@
+sudo: required
+services:
+    - docker
+before_install:
+    - docker --version
+script:
+    - ./build.sh
+after_script:
+    - docker images
+
