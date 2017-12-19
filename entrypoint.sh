@@ -4,6 +4,7 @@ mkdir /var/run/sshd
 mkdir -p /shared
 
 if [ -f /shared/sources.list ]; then ln -sf /shared/sources.list /etc/apt/sources.list; fi
+if [ -f /shared/zsh_history ]; then ln -sf /shared/zsh_history /root/.zsh_history; fi
 if [ -f /shared/resolv.conf ]; then cat /shared/resolv.conf > /etc/resolv.conf; fi
 if [ -f /shared/authorized_keys ]; then
 	mkdir -p /root/.ssh

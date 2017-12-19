@@ -52,6 +52,7 @@ RUN wget "https://raw.githubusercontent.com/seebi/dircolors-solarized/master/dir
     && dircolors -b dircolors.256dark > /root/.dircolors_source
 
 COPY authorized_keys /root/.ssh/authorized_keys
+COPY vimrc /root/.vimrc
 
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 COPY entrypoint.sh /entrypoint.sh

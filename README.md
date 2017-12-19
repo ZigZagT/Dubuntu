@@ -37,6 +37,7 @@ Put files listed below inside `/shared` to override corresponding settings.
 - `dircolors`: override color mapping of the inside console.
 - `profile`: addition `zsh` startup source script.
 - `ssh_host_rsa_key`: override /etc/ssh/ssh_host_rsa_key, the host rsa key. Will be generated automatically if not exists.
+- `zsh_history`: override `/root/.zsh_history` in VM.
 
 
 ## What's Inside
@@ -51,6 +52,7 @@ Put files listed below inside `/shared` to override corresponding settings.
 
 ## Know Issues
 - Because Docker for Mac is running in a real virtual machine([hyperkit](https://github.com/moby/hyperkit)), after a long sleep, the hyperkit may have its clock drift, which may cause the ssh connection fails. Re-run `./start.sh` to workaround.
+- Oh my zsh command duplicated on tab completion: https://github.com/sindresorhus/pure/issues/300 https://github.com/robbyrussell/oh-my-zsh/issues/4107 https://github.com/robbyrussell/oh-my-zsh/issues/3368
 
 ## TODO
 - Setup node.js dev environment
