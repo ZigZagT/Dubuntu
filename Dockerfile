@@ -12,6 +12,11 @@ RUN apt-get update \
         lsb \
         man \
         git \
+        autoconf \
+        autopoint \
+        automake \
+        autotools-dev \
+        libtool \
         telnet \
         vim \
         curl \
