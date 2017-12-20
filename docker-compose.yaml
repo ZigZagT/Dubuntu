@@ -4,8 +4,6 @@ services:
     build: .
     image: 4oranges/dubuntu
     container_name: dubuntu
-    ports:
-    - 127.0.0.1:22:22
     volumes:
     - ./shared:/shared
     privileged: true

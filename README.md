@@ -52,7 +52,6 @@ Put files listed below inside `/shared` to override corresponding settings.
 
 ## Know Issues
 - Because Docker for Mac is running in a real virtual machine([hyperkit](https://github.com/moby/hyperkit)), after a long sleep, the hyperkit may have its clock drift, which may cause the ssh connection fails. Re-run `./start.sh` to workaround.
-- Oh my zsh command duplicated on tab completion: https://github.com/sindresorhus/pure/issues/300 https://github.com/robbyrussell/oh-my-zsh/issues/4107 https://github.com/robbyrussell/oh-my-zsh/issues/3368
 
 ## TODO
 - Setup node.js dev environment

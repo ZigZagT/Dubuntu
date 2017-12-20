@@ -1,6 +1,9 @@
 #!/bin/bash
 
-mkdir /var/run/sshd
+set -x
+set -e
+
+mkdir -p /var/run/sshd
 mkdir -p /shared
 
 if [ -f /shared/sources.list ]; then ln -sf /shared/sources.list /etc/apt/sources.list; fi

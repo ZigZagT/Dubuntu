@@ -1,6 +1,4 @@
 #!/usr/bin/env zsh
-locale-gen $LANG > /dev/null
-
 export ZSH=/root/.oh-my-zsh
 export EDITOR=vim
 ZSH_THEME="dubuntu"

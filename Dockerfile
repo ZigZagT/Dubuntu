@@ -1,11 +1,13 @@
 FROM ubuntu:xenial
 
 ARG DEBIAN_FRONTEND=noninteractive
-ENV TERM xterm-256color
-ENV LC_CTYPE en_US.UTF-8
-
+ENV TERM=xterm-256color LANG=en_US.UTF-8
 RUN apt-get update \
+    && apt-get install -y locales \
+    && locale-gen $LANG \
     && apt-get install -y --no-install-recommends apt-utils \
+    && echo reconfig locales: \
+    && dpkg-reconfigure locales \
     && apt-get install -y \
         lsb \
         man \
@@ -53,7 +55,6 @@ RUN wget "https://raw.githubusercontent.com/seebi/dircolors-solarized/master/dir
 
 COPY authorized_keys /root/.ssh/authorized_keys
 COPY vimrc /root/.vimrc
-
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 COPY entrypoint.sh /entrypoint.sh
 
