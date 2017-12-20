@@ -20,6 +20,8 @@ RUN apt-get update \
         make \
         bzip2 \
         mtr \
+        nmap \
+        netcat-openbsd \
         openssh-server \
         iputils-ping \
         httping \
@@ -35,6 +37,7 @@ RUN apt-get update \
         python-pip \
         python3 \
         python3-pip \
+        command-not-found \
     && curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add - \
     && add-apt-repository \
         "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
