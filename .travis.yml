@@ -5,8 +5,7 @@ services:
 install:
     - docker --version
 script:
-    - ./build.sh
+    - docker-compose build --force-rm
 after_success:
     - docker login -u $DOCKER_HUB_USERNAME -p $DOCKER_HUB_PASSWORD
     - docker push 4oranges/dubuntu
-

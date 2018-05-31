@@ -4,6 +4,8 @@ services:
     build: .
     image: 4oranges/dubuntu
     container_name: dubuntu
+    environment:
+    - APT_SOURCE=tuna
     volumes:
     - ./shared:/shared
     privileged: true
