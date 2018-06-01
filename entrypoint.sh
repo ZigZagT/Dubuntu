@@ -30,4 +30,8 @@ if [ ! -f /shared/ssh_host_rsa_key ]; then
 fi
 cp -f /shared/ssh_host_rsa_key /etc/ssh/ssh_host_rsa_key
 
+if [ -n "$UNMINIMIZE" ]; then
+	expect -c 'spawn unminimize; expect "Would you like to continue"; send y\n; expect "Do you want to continue"; send y\n; interact'
+fi
+
 /usr/bin/supervisord -c /etc/supervisor/conf.d/supervisord.conf

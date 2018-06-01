@@ -9,6 +9,7 @@ RUN apt-get update \
     && echo reconfig locales: \
     && dpkg-reconfigure locales \
     && apt-get install -y \
+        expect \
         lsb \
         man \
         git \

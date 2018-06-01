@@ -48,7 +48,7 @@ Any docker related settings are defined in `docker-compose.yaml`. Simply add por
 # make sure you are in side the Dubuntu directory
 # And port 22 is mapped in `docker-compose.yaml` correctly
 cat ~/.ssh/id_rsa.pub >> shared/authorized_keys
-docker stop dubuntu && docker start dubuntu
+dubuntu-recreate
 ssh root@localhost	# or somewhere you defined
 ```
 
@@ -64,6 +64,7 @@ Priority: ENV > Conf files
 ### Config via Environment
 - APT_SOURCE=< tuna | official >
 - APT_PACKAGES=< additional package list seprated by space >
+- UNMINIMIZE=true	# invoke command `unminimize` in official ubuntu image at container start time.
 
 ### Configuration Files
 Put files listed below inside `/shared` to override corresponding files inside the container.
@@ -75,7 +76,7 @@ Put files listed below inside `/shared` to override corresponding files inside t
 - `ssh_host_rsa_key`: override /etc/ssh/ssh_host_rsa_key, the host rsa key. Will be generated automatically if not exists.
 - `zsh_history`: override `/root/.zsh_history` in VM.
 
-## Know Issues
+## Known Issues
 - Because Docker for Mac is running in a real virtual machine([hyperkit](https://github.com/moby/hyperkit)), after a long sleep, the hyperkit may have its clock drift, which may cause the ssh connection fails. restart the container to workaround.
 - `/shared/zsh_history` currently not working
 
