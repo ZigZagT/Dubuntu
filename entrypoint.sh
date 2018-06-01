@@ -11,6 +11,10 @@ if [ -n "$APT_SOURCE" ]; then
 		cp -f "/etc/apt/sources.list.$APT_SOURCE" /etc/apt/sources.list
 	fi
 fi
+if [ -n "$APT_PACKAGES" ]; then
+	apt-get install -y $APT_PACKAGES
+fi
+
 # if [ -f /shared/zsh_history ]; then ln -sf /shared/zsh_history /root/.zsh_history; fi
 if [ -f /shared/resolv.conf ]; then cat /shared/resolv.conf > /etc/resolv.conf; fi
 if [ -f /shared/authorized_keys ]; then

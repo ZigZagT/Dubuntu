@@ -4,33 +4,61 @@
 
 A handy ubuntu enviroment in docker.
 
+## What's Inside
+- Ubuntu bionic (18.04LTS)
+- basic network utils like telnet, ping, etc.
+- lsb
+- ssh server
+- oh my zsh
+- docker engine (docker in docker)
+- python2 and python3
+- ...
+
+
 ## Installation
-### Pull from DockerHub
 ```bash
-docker pull 4oranges/dubuntu
+# Install command line tools to /usr/local/bin
+./install
 ```
 
-### Or Build it Locally
-```bash
-git clone https://github.com/4Oranges/Dubuntu.git && cd Dubuntu
-./build.sh
-```
+## Command Line Reference
+### `dubuntu-pull`
+pull the image from docker hub
 
-## Usage
-### Boot/Restart VM
+### `dubuntu-build`
+build the image locally
+
+### `dubuntu-recreate`
+recreate / restart Dubuntu
+
+### `dubuntu-attach`
+attatch to running Dubuntu
+
+### start / stop container
+use `docker start dubuntu` and `docker stop dubuntu`
+
+## Recipes
+### Change Docker Settings
+Any docker related settings are defined in `docker-compose.yaml`. Simply add port mapping / volumes as you wish.
+
+### Connect to Dubuntu via SSH
 ```bash
 # make sure you are in side the Dubuntu directory
+# And port 22 is mapped in `docker-compose.yaml`
 cat ~/.ssh/id_rsa.pub >> shared/authorized_keys
-./start.sh
+docker stop dubuntu && docker start dubuntu
+ssh root@localhost	# or somewhere you defined
 ```
 
-### Connect to VM
-```bash
-ssh root@localhost
-```
+## Configurations
+Priority: ENV > Conf files
 
-### Change VM Settings
-Put files listed below inside `/shared` to override corresponding settings. 
+### Config via Environment
+- APT_SOURCE=< tuna | official >
+- APT_PACKAGES=< additional package list seprated by space >
+
+### Configuration Files
+Put files listed below inside `/shared` to override corresponding files inside the container.
 - `sources.list`: override `/etc/apt/sources.list` in VM.
 - `resolv.conf`: override `/etc/resolv.conf` in VM.
 - `authorized_keys`: override `/root/.ssh/authorized_keys` in VM.
@@ -39,19 +67,9 @@ Put files listed below inside `/shared` to override corresponding settings.
 - `ssh_host_rsa_key`: override /etc/ssh/ssh_host_rsa_key, the host rsa key. Will be generated automatically if not exists.
 - `zsh_history`: override `/root/.zsh_history` in VM.
 
-
-## What's Inside
-- Ubuntu xenial (16.04)
-- basic network utils like telnet, ping, etc.
-- lsb
-- ssh server
-- oh my zsh
-- docker engine
-- python2 and python3
-- ...
-
 ## Know Issues
-- Because Docker for Mac is running in a real virtual machine([hyperkit](https://github.com/moby/hyperkit)), after a long sleep, the hyperkit may have its clock drift, which may cause the ssh connection fails. Re-run `./start.sh` to workaround.
+- Because Docker for Mac is running in a real virtual machine([hyperkit](https://github.com/moby/hyperkit)), after a long sleep, the hyperkit may have its clock drift, which may cause the ssh connection fails. restart the container to workaround.
+- `/shared/zsh_history` currently not working
 
 ## TODO
 - Setup node.js dev environment

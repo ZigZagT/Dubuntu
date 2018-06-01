@@ -51,7 +51,7 @@ RUN apt-get update \
 RUN wget -O dircolors "https://raw.githubusercontent.com/seebi/dircolors-solarized/master/dircolors.ansi-light" \
     && dircolors -b dircolors > /root/.dircolors_source \
     && rm -f dircolors \
-    && curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh | bash -s \
+    && curl -fsSL "https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh" | bash -s \
     && chsh -s /bin/zsh
 COPY zshrc /root/.zshrc
 COPY sources.list.* /etc/apt/
