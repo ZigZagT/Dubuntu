@@ -4,8 +4,11 @@ services:
     build: .
     image: 4oranges/dubuntu
     container_name: dubuntu
-    environment:
-    - APT_SOURCE=tuna
+#   ports:
+#   - 22:22
+#   environment:
+#   - APT_SOURCE=tuna
+#   - APT_PACKAGES="nginx httping"
     volumes:
     - ./shared:/shared
     privileged: true
