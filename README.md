@@ -50,6 +50,12 @@ docker stop dubuntu && docker start dubuntu
 ssh root@localhost	# or somewhere you defined
 ```
 
+### Clean up danling images after rebuild
+`docker rmi $(docker images -q -f dangling=true)`
+
+### Move Dubuntu Git Repo to Another Location
+simply re-run `install.sh`
+
 ## Configurations
 Priority: ENV > Conf files
 
