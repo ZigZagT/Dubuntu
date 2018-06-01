@@ -17,7 +17,9 @@ A handy ubuntu enviroment in docker.
 
 ## Installation
 ```bash
-# Install command line tools to /usr/local/bin
+git clone https://github.com/4Oranges/Dubuntu
+cd Dubuntu
+# Install command line tools into /usr/local/bin
 ./install
 ```
 
@@ -44,7 +46,7 @@ Any docker related settings are defined in `docker-compose.yaml`. Simply add por
 ### Connect to Dubuntu via SSH
 ```bash
 # make sure you are in side the Dubuntu directory
-# And port 22 is mapped in `docker-compose.yaml`
+# And port 22 is mapped in `docker-compose.yaml` correctly
 cat ~/.ssh/id_rsa.pub >> shared/authorized_keys
 docker stop dubuntu && docker start dubuntu
 ssh root@localhost	# or somewhere you defined
