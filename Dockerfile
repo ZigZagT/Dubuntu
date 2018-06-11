@@ -64,4 +64,4 @@ COPY entrypoint.sh /entrypoint.sh
 # VOLUME /shared    commented out to prevent auto created volume
 WORKDIR /shared
 EXPOSE 22 80 443
-CMD ["/entrypoint.sh"]
+ENTRYPOINT ["/entrypoint.sh"]
