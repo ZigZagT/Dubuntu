@@ -61,7 +61,7 @@ COPY vimrc /root/.vimrc
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 COPY entrypoint.sh /entrypoint.sh
 
-VOLUME /shared
+# VOLUME /shared    commented out to prevent auto created volume
 WORKDIR /shared
 EXPOSE 22 80 443
 CMD ["/entrypoint.sh"]
