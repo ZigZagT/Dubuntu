@@ -9,6 +9,8 @@ RUN apt-get update \
     && echo reconfig locales: \
     && dpkg-reconfigure locales \
     && apt-get install -y \
+        lxc \
+        iptables \
         expect \
         lsb \
         man \
