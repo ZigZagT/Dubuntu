@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/BananaWanted/Dubuntu.svg)](https://travis-ci.org/BananaWanted/Dubuntu) [![Docker Stars](https://img.shields.io/docker/stars/bananawanted/dubuntu.svg)](https://hub.docker.com/r/bananawanted/dubuntu/) [![Docker Pulls](https://img.shields.io/docker/pulls/bananawanted/dubuntu.svg)](https://hub.docker.com/r/bananawanted/dubuntu/) 
 
-A handy ubuntu enviroment in docker.
+A user-friendly, versatile, portable ubuntu toolbox in docker.
 
 ## What's Inside
 - Ubuntu bionic (18.04LTS)
@@ -93,6 +93,9 @@ Put files listed below inside `/shared` to override corresponding files inside t
 - `/shared/zsh_history` currently not working
 
 ## TODO
-- Setup node.js dev environment
-- Basic web server environment
-
+- Option for setup node.js dev environment
+- Optional for setup basic web server environment
+- Add to Homebrew
+- Utilize Makefile to manage the mess
+- Follow [XDG Base Directory Specification](https://specifications.freedesktop.org/basedir-spec/basedir-spec-0.6.html) for config file
+- Add alpine based branch to reduce image size
