@@ -49,7 +49,7 @@ Run `Dubuntu` as a disposible container
 #### `dubuntu-run`
 Launch dubuntu in current terminal as a disposible container, attach with `zsh`.
 
-You may add `-v <dir>:/Shared/<dir>` to the end of this command to mount something into the container.
+You may add `-v <dir>:/shared/<dir>` to the end of this command to mount something into the container.
 
 ## Recipes
 ### Change Docker Settings
