@@ -22,7 +22,8 @@ chmod a+x /usr/local/bin/dubuntu-recreate
 
 echo "#!/usr/bin/env bash
 cd \"$DIR\"
-docker-compose exec dubuntu zsh
+docker exec -it dubuntu zsh
+# docker-compose exec dubuntu zsh
 " > /usr/local/bin/dubuntu-attach
 chmod a+x /usr/local/bin/dubuntu-attach
 
