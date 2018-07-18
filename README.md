@@ -24,20 +24,32 @@ cd Dubuntu
 ```
 
 ## Command Line Reference
-### `dubuntu-pull`
-pull the image from docker hub
 
-### `dubuntu-build`
-build the image locally
+#### `dubuntu-pull`
+Pull the latest image from docker hub
 
-### `dubuntu-recreate`
-recreate / restart Dubuntu
+### Daemon Mode Commands
+Run `Dubuntu` in background as a daemon
 
-### `dubuntu-attach`
-attatch to running Dubuntu
+#### `dubuntu-build`
+Build the image locally
 
-### start / stop container
-use `docker start dubuntu` and `docker stop dubuntu`
+#### `dubuntu-recreate`
+Recreate / restart Dubuntu
+
+#### `dubuntu-attach`
+Attatch to running Dubuntu
+
+#### start / stop container
+Use `docker start dubuntu` and `docker stop dubuntu`
+
+### Normal Mode Commands
+Run `Dubuntu` as a disposible container
+
+#### `dubuntu-run`
+Launch dubuntu in current terminal as a disposible container, attach with `zsh`.
+
+You may add `-v <dir>:/Shared/<dir>` to the end of this command to mount something into the container.
 
 ## Recipes
 ### Change Docker Settings
