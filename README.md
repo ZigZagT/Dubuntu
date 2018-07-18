@@ -1,6 +1,6 @@
 # Dubuntu
 
-[![Build Status](https://travis-ci.org/4Oranges/Dubuntu.svg)](https://travis-ci.org/4Oranges/Dubuntu) [![Docker Stars](https://img.shields.io/docker/stars/4oranges/dubuntu.svg)](https://hub.docker.com/r/4oranges/dubuntu/) [![Docker Pulls](https://img.shields.io/docker/pulls/4oranges/dubuntu.svg)](https://hub.docker.com/r/4oranges/dubuntu/) 
+[![Build Status](https://travis-ci.org/BananaWanted/Dubuntu.svg)](https://travis-ci.org/BananaWanted/Dubuntu) [![Docker Stars](https://img.shields.io/docker/stars/bananawanted/dubuntu.svg)](https://hub.docker.com/r/bananawanted/dubuntu/) [![Docker Pulls](https://img.shields.io/docker/pulls/bananawanted/dubuntu.svg)](https://hub.docker.com/r/bananawanted/dubuntu/) 
 
 A handy ubuntu enviroment in docker.
 
@@ -17,7 +17,7 @@ A handy ubuntu enviroment in docker.
 
 ## Installation
 ```bash
-git clone https://github.com/4Oranges/Dubuntu
+git clone https://github.com/BananaWanted/Dubuntu
 cd Dubuntu
 # Install command line tools into /usr/local/bin
 ./install

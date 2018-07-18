@@ -25,3 +25,9 @@ cd \"$DIR\"
 docker-compose exec dubuntu zsh
 " > /usr/local/bin/dubuntu-attach
 chmod a+x /usr/local/bin/dubuntu-attach
+
+echo "#!/usr/bin/env bash
+docker run --rm -it --privileged bananawanted/dubuntu zsh
+" > /usr/local/bin/dubuntu-run
+chmod a+x /usr/local/bin/dubuntu-run
+

@@ -2,7 +2,7 @@ version: "3"
 services:
   dubuntu:
     build: .
-    image: 4oranges/dubuntu
+    image: bananawanted/dubuntu
     container_name: dubuntu
 #   ports:
 #   - 22:22/tcp
