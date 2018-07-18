@@ -1,6 +1,8 @@
 #!/bin/bash
 set -e
 
+/wrapdocker.sh || true
+
 mkdir -p /var/run/sshd
 mkdir -p /shared
 

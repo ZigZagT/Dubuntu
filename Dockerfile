@@ -62,6 +62,7 @@ COPY dubuntu.zsh-theme /root/.oh-my-zsh/custom/dubuntu.zsh-theme
 COPY vimrc /root/.vimrc
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 COPY entrypoint.sh /entrypoint.sh
+COPY wrapdocker.sh /wrapdocker.sh
 
 # VOLUME /shared    commented out to prevent auto created volume
 WORKDIR /shared
